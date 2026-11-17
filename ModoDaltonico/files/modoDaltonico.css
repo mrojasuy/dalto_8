@@ -1,0 +1,128 @@
+/* ===========================================================
+   Modo Daltonico - Accessibility filters for MantisBT
+   Uses CSS filter to adjust the entire page without modifying
+   individual element colors. Maintains legibility and hierarchy.
+   =========================================================== */
+
+/* --- Floating toggle button --- */
+.md-toggle {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 99999;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 6px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.md-toggle-btn {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border: 2px solid #333;
+	background-color: #fff;
+	color: #333;
+	font-size: 22px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	transition: background-color 0.2s, color 0.2s;
+	line-height: 1;
+	padding: 0;
+}
+
+.md-toggle-btn:hover {
+	background-color: #e8e8e8;
+}
+
+.md-toggle-btn:focus {
+	outline: 3px solid #005fcc;
+	outline-offset: 2px;
+}
+
+.md-toggle-btn[aria-pressed="true"] {
+	background-color: #0056b3;
+	color: #fff;
+	border-color: #003d80;
+}
+
+.md-toggle-btn[aria-pressed="true"]:hover {
+	background-color: #003d80;
+}
+
+/* --- Mode selector dropdown --- */
+.md-mode-selector {
+	display: none;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	padding: 6px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.md-mode-selector.md-visible {
+	display: block;
+}
+
+.md-mode-select {
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	padding: 4px 8px;
+	font-size: 13px;
+	background: #fff;
+	color: #333;
+	cursor: pointer;
+}
+
+.md-mode-select:focus {
+	outline: 2px solid #005fcc;
+	outline-offset: 1px;
+}
+
+/* --- Active indicator badge --- */
+.md-badge {
+	display: none;
+	background-color: #0056b3;
+	color: #fff;
+	font-size: 11px;
+	padding: 2px 8px;
+	border-radius: 10px;
+	white-space: nowrap;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.md-badge.md-visible {
+	display: block;
+}
+
+/* --- SVG Filter definitions (hidden) --- */
+.md-filters {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+/* --- Accessibility filter application --- */
+html.md-protanopia {
+	filter: url(#md-filter-protanopia);
+}
+
+html.md-deuteranopia {
+	filter: url(#md-filter-deuteranopia);
+}
+
+html.md-tritanopia {
+	filter: url(#md-filter-tritanopia);
+}
+
+/* Exclude the toggle itself from filters */
+html.md-protanopia .md-toggle,
+html.md-deuteranopia .md-toggle,
+html.md-tritanopia .md-toggle {
+	filter: url(#md-filter-identity);
+}

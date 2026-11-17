@@ -1,0 +1,122 @@
+================================================================
+GUIA DE INSTALACION Y USO - Plugin "Modo Daltonico"
+================================================================
+
+INSTALACION
+-----------
+1. Copie la carpeta "ModoDaltonico" completa dentro del directorio
+   plugins/ de su instalacion de MantisBT:
+   mantisbt/plugins/ModoDaltonico/
+
+2. Inicie sesion como administrador en MantisBT.
+
+3. Navegue a: Administracion > Complementos (Manage > Plugins).
+
+4. Busque "Modo Daltonico" en la lista de plugins disponibles
+   y haga clic en "Instalar" (Install).
+
+5. El plugin aparecera en la seccion de Plugins instalados.
+
+
+CONFIGURACION
+-------------
+1. En la lista de Plugins instalados, haga clic en el nombre
+   del plugin "Modo Daltonico".
+
+2. Desde la pagina de configuracion puede:
+   - Activar o desactivar el plugin globalmente.
+   - Seleccionar el tipo de contraste por defecto:
+     * Protanopia (no ve el rojo)
+     * Deuteranopia (no ve el verde)
+     * Tritanopia (no ve el azul)
+
+3. Haga clic en "Guardar" para aplicar los cambios.
+
+
+USO DEL BOTON FLOTANTE
+----------------------
+1. Cuando el plugin esta activo, aparece un boton circular
+   flotante en la esquina inferior derecha de todas las paginas.
+
+2. Haga clic en el boton para activar/desactivar el modo
+   daltonico. El boton cambia de color cuando esta activo.
+
+3. Al activar el modo, aparece un selector desplegable donde
+   puede elegir el tipo de daltonismo (protanopia, deuteranopia
+   o tritanopia).
+
+4. Un indicador (badge) muestra el estado actual y el tipo
+   de contraste seleccionado.
+
+5. La configuracion se guarda automaticamente en el navegador
+   (localStorage), por lo que se mantiene entre pestanas y
+   sesiones sin necesidad de iniciar sesion nuevamente.
+
+
+COMPATIBILIDAD
+--------------
+- MantisBT: version 2.0 o superior
+- Navegadores: Google Chrome, Safari y Microsoft Edge
+  (versiones mas recientes)
+
+
+================================================================
+INSTALLATION AND USAGE GUIDE - "Colorblind Mode" Plugin
+================================================================
+
+INSTALLATION
+------------
+1. Copy the complete "ModoDaltonico" folder into your MantisBT
+   plugins/ directory:
+   mantisbt/plugins/ModoDaltonico/
+
+2. Log in as an administrator in MantisBT.
+
+3. Navigate to: Administration > Manage Plugins.
+
+4. Find "Colorblind Mode" in the available plugins list
+   and click "Install".
+
+5. The plugin will appear in the Installed Plugins section.
+
+
+CONFIGURATION
+-------------
+1. In the Installed Plugins list, click on the plugin name
+   "Colorblind Mode".
+
+2. From the configuration page you can:
+   - Enable or disable the plugin globally.
+   - Select the default contrast type:
+     * Protanopia (no red perception)
+     * Deuteranopia (no green perception)
+     * Tritanopia (no blue perception)
+
+3. Click "Save" to apply changes.
+
+
+USING THE FLOATING BUTTON
+--------------------------
+1. When the plugin is active, a circular floating button
+   appears at the bottom-right corner of every page.
+
+2. Click the button to toggle colorblind mode on/off.
+   The button changes color when active.
+
+3. When active, a dropdown selector appears where you can
+   choose the type of color vision deficiency (protanopia,
+   deuteranopia, or tritanopia).
+
+4. A badge indicator shows the current state and the
+   selected contrast type.
+
+5. Settings are automatically saved in the browser
+   (localStorage), so they persist across tabs and
+   sessions without needing to log in again.
+
+
+COMPATIBILITY
+-------------
+- MantisBT: version 2.0 or higher
+- Browsers: Google Chrome, Safari, and Microsoft Edge
+  (latest versions)
